@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Request a Tutor </h1>
+<form id="Request a Tutor">
+
+  <div class="form-control">
+    <form action="server side script"name="myForm" onsubmit="return validation()" method="post">
+      <label for="name" id="label-name">
+        Name
+    </label>
+    <input type="text" name="fname" placeholder="Enter your name" required />
+  </div>
+  <div class="form-control">
+    <label for="email" id="label-email">
+      Email
+    </label>
+    <input type="email" name="email" placeholder="Enter your email" required/>
+  </div>
+  <div class="form-control">
+    <label for="phone" id="label-age">
+      Phone
+    </label>
+    <input type="phone" name="phone" placeholder="Enter your phone number" required/>
+  </div>
+
+  <div class="form-control">
+    <label for="location" id="label-name">
+      location
+    </label>
+    <input type="text" name="location" placeholder="Enter your location" required/>
+  </div>
+
+  <div class="form-control">
+    <label for="Details of Requirement" id="label-name">
+      Details of Requirement
+    </label>
+    <input type="text" name="Details of Requirement" placeholder="eg: share your details about requirement of tutor" required/>
+ </div>
+
+ <div class="form-control">
+  <label for="Subjects" id="label-name">
+    Subjects
+  </label>
+  <input type="text" name="Subjects" placeholder="Enter subjects you want tutor to teach"required/>
+ </div>
+
+  <div class="form-control">
+    <label for="Level" id="label-role">
+      Select Level
+    </label>
+    <select name="Skill Level" id="Level">
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Expert">Expert</option>
+      <option value="Other">Other</option>
+        <option value="Preschool,Kindergarten,KG,Nursery">Preschool,Kindergarten,KG,Nursery</option>
+        <option value="Grade1">Grade1</option>
+        <option value="Grade2">Grade2</option>
+        <option value="Grade3">Grade3</option>
+        <option value="Grade4">Grade4</option>
+        <option value="Grade5">Grade5</option>
+        <option value="Grade6">Grade6</option>
+        <option value="Grde7">Grade7</option>
+        <option value="Grade8">Grade8</option>
+        <option value="Grade9">Grade9</option>
+        <option value="Grade10">Grade10</option>
+        <option value="IGCSE">IGCSE</option>
+        <option value="GCSE">GCSE</option>
+        <option value="0 Level">0 Level</option>
+        <option value="Grade11">Grade11</option>
+        <option value="AS Level">AS Level</option>
+        <option value="A2 Level">A2 Level</option>
+        <option value="A Level">A Level</option>
+        <option value="Grade12">Grade12</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelors/undergraduate">Bachelors/undergraduate</option>
+        <option value="Masters/Postgraduate">Masters/Postgraduate</option>
+        <option value="MPhill">MPhill</option>
+        <option value="Doctor/PhD">Doctor/PhD</option>
+          <option value="Adult/Casual Learning">Adult/Casual Learning</option>
+
+        </select>
+      </select>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label id="I want">
+      I want
+    </label>
+    <br>
+    <label for="option-1" id="option-1">
+      <input type="radio" id="option-1" name="I want">Tutoring</input>
+    </label>
+    <label for="option-2" id="option-2">
+      <input type="radio" id="option-2" name="I want">Assignment help</input>
+    </label>
+  </div>
+  
+  <div class="form-control">
+    <label>Meeting Options</label>
+    <br>
+    <label for="inp-1">
+      <input type="checkbox" name="inp">Online(using Skype etc)</input>
+    </label>
+    <br>
+    <label for="inp-2">
+      <input type="checkbox" name="inp">At my place(home/Institute)</input>
+    </label>
+    <br>
+    <label for="inp-3">
+      <input type="checkbox" name="inp">Travel to tutor</input>
+    </label>
+  </div>
+
+  <div class="form-control">
+    <label for="Gender Prefrence" id="label-role">
+      Gender Prefrences
+    </label>
+    <select name="Gender Prefrence" id="Gender">
+      <option value="None">None</option>
+      <option value="Preferably male">Preferably male</option>
+      <option value="Preferably Female">Preferably Female</opion>
+      <option value="only male">only male</option>
+      <option value="only female">only female</option>
+    </select>
+   </div>
+
+   <div class="form-control">
+    <label for="Tutors Wanted" id="label-role">
+    Tutors Wanted
+    </label>
+    <select name="Tutors wanted" id="Tutor">
+      <option value="Only one">Only one</option>
+      <option value="More than one">More than one</option>
+      <option value="As many as possible">As many as possible</option>
+    </select>
+   </div>
+
+   <div class="form-control">
+    <label for="I need someone" id="label-role">
+      I need someone
+    </label>
+    <select name="I need someone" id="need">
+      <option value="part time">part time</option>
+      <option value="full time">full time</option>
+    </select>
+   </div>
+  
+  <div class="form-control">
+    <label for="comment">
+      Any comments or suggestions
+    </label>
+    <textarea name="comment" id="comment" placeholder="Enter your comment here">
+    </textarea>
+  </div>
+  <!-- <div class="button">
+    <button type="reset" value="reset" id="reset">
+      Reset
+    </button>
+    <button type="submit" value="submit" id="submit">
+      Submit
+    </button>
+  </div> -->
+<input class = "button"type="submit" value="SUBMIT">
+</form>
+<script>
+  function validation(){
+    var returnval=true;
+    var name = document.forms['myform']['fname'].value;
+    if(name.length<5){
+      alert("*Name langth is short");
+      returnval= false;
+    }
+    var email=document.forms['myForm']['email'].value;
+    if(email.length>15){
+      alert("*Email length is too long")
+      returnval=false;
+    }
+    var phone = document.forms['myForm']['phone'].value;
+    if(phone.length!=10){
+      alert("*Phone number should be of 10 digits!")
+      returnval=false;
+    }
+  }
+</script>
+</body>
+</html>
